@@ -14,7 +14,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 script{
-                    bat 'docker build -t kingkarthikg/kart:devops-integration .'
+                    bat 'docker build -t kingkarthikg/devops-integration .'
                 }
             }
         }
