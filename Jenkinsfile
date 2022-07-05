@@ -21,7 +21,7 @@ pipeline{
         stage('Push image to hub'){
                 steps{
                    script{
-                        withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerpwd')]) {
+                        withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerpwd')]) {
                            bat 'docker login -u kingkarthikg -p ${dockerhubpwd}'
                            bat 'docker push kingkarthikg'
                         }
