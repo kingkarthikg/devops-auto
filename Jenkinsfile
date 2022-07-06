@@ -23,7 +23,7 @@ pipeline{
                    script{
                         withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                            bat 'docker login -u kingkarthikg -p ${dockerhubpwd}'
-                           bat 'docker push kingkarthikg'
+                           bat 'docker push kingkarthikg/devops-integration'
                         }
                    }
               }
